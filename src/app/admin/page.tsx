@@ -43,7 +43,8 @@ export default function AdminPage() {
                 setIsAuthenticated(true);
                 fetchData();
             } else {
-                alert("Invalid Admin Password");
+                const data = await res.json().catch(() => ({}));
+                alert(`Login failed: ${data.error || "Server Error (Check Vercel Logs)"}`);
             }
         } catch (error) {
             console.error(error);
