@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { Trash2, Plus, Users, Clock, Trophy, BarChart, Lock, CheckCircle } from "lucide-react";
 
 export default function AdminPage() {
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -35,7 +36,7 @@ export default function AdminPage() {
             const res = await fetch("/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email: "admin@quiz.com", password, isAdmin: true }),
+                body: JSON.stringify({ email: email || "admin@quiz.com", password, isAdmin: true }),
             });
 
             if (res.ok) {
@@ -225,10 +226,18 @@ export default function AdminPage() {
                     <CardContent>
                         <form onSubmit={handleLogin} className="space-y-4">
                             <Input
+                                type="email"
+                                placeholder="Admin Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <Input
                                 type="password"
                                 placeholder="Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                required
                             />
                             <Button type="submit" className="w-full" disabled={loading}>
                                 {loading ? "Verifying..." : "Login"}
