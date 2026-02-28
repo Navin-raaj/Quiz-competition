@@ -18,13 +18,8 @@ export async function POST(req: Request) {
         if (isAdmin) {
             // Admin Login Flow
             if (!user) {
-                // If admin doesn't exist, create one (first time setup) OR return error
-                // allowing creation for now for simplicity, but in prod you'd seed this.
-                if (!password) return NextResponse.json({ error: 'Password required' }, { status: 400 });
-                const hashedPassword = await bcrypt.hash(password, 10);
-                user = await prisma.user.create({
-                    data: { name: 'Admin', email, password: hashedPassword, role: 'ADMIN' },
-                });
+                // Admin does not exist in DB
+                return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
             } else {
                 if (user.role !== 'ADMIN') {
                     return NextResponse.json({ error: 'Not authorized as admin' }, { status: 403 });
