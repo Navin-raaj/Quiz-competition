@@ -9,6 +9,7 @@ export async function GET(req: Request) {
         // Ideally, use a session cookie or JWT interaction.
 
         const users = await prisma.user.findMany({
+            where: { role: 'USER' },
             include: { submissions: true },
             orderBy: { createdAt: 'desc' }
         });
