@@ -29,15 +29,15 @@ export function QuestionCard({ question, selectedOptionIndex, onSelectOption }: 
                             className={cn(
                                 "p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 hover:bg-accent",
                                 isSelected
-                                    ? "border-primary bg-primary/10 text-primary font-medium"
-                                    : "border-muted bg-card"
+                                    ? "border-primary bg-primary/20 text-foreground font-bold shadow-md ring-1 ring-primary"
+                                    : "border-muted bg-card text-muted-foreground hover:border-primary/50"
                             )}
                         >
                             <div className="flex items-center space-x-3">
                                 <div
                                     className={cn(
                                         "w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs",
-                                        isSelected ? "border-primary bg-primary text-white" : "border-muted-foreground"
+                                        isSelected ? "border-primary bg-primary text-primary-foreground" : "border-muted-foreground"
                                     )}
                                 >
                                     {String.fromCharCode(65 + index)}
