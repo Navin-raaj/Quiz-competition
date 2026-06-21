@@ -43,10 +43,15 @@ Quiz Management:
 	Technology Stack
 	
 Frontend: HTML, CSS, JavaScript
+
 Backend: [Add your backend technology]
+
 Database: [Add your database technology]
+
 Authentication: Session-based/Login system
+
 Reporting: Excel export functionality
+
 Workflow:
 
 	Administrator creates participant accounts.
