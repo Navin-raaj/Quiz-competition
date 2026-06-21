@@ -5,18 +5,31 @@ Overview:
   The Quiz Competition Management System is a web-based platform designed to conduct multi-level quiz competitions efficiently and securely. The system provides separate portals for Administrators and Participants, enabling smooth competition management, participant tracking, automated qualification, and result publication.
 
 Features:
+
 	Admin Module
+	
 	Secure admin login.
+	
 	Add and remove participants.
+	
 	Configure the number of participants qualified for the next round.
+	
 	Schedule start and end times for each quiz level.
+	
 	Publish results and leaderboard.
+	
 	Download participant results in Excel format.
+	
 	Participant Module
+	
 	Login using credentials provided by the administrator.
+	
 	Attempt quizzes based on eligibility and schedule.
+	
 	View scores and rankings after result publication.
+	
 	Access only the levels they qualify for.
+	
 Quiz Management:
 	Multi-level quiz structure (Level 1, Level 2, Level 3).
 	Automatic qualification of top-performing participants to subsequent levels.
