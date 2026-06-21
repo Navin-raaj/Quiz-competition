@@ -31,6 +31,7 @@ Features:
 	Access only the levels they qualify for.
 	
 Quiz Management:
+
 	Multi-level quiz structure (Level 1, Level 2, Level 3).
 	Automatic qualification of top-performing participants to subsequent levels.
 	Configurable qualification threshold for each round.
@@ -40,12 +41,14 @@ Quiz Management:
 	Anti-tab-switching detection to discourage unfair practices during assessments.
 	Restricted access to quiz levels based on qualification status.
 	Technology Stack
+	
 Frontend: HTML, CSS, JavaScript
 Backend: [Add your backend technology]
 Database: [Add your database technology]
 Authentication: Session-based/Login system
 Reporting: Excel export functionality
 Workflow:
+
 	Administrator creates participant accounts.
 	Participants log in using provided credentials.
 	Level 1 becomes available according to the scheduled time.
@@ -56,6 +59,7 @@ Workflow:
 	Participants view their scores and rankings.
 	Administrator downloads results as an Excel report.
 Key Highlights:
+
 	Multi-level elimination-based quiz competition.
 	Automated participant qualification system.
 	Admin-controlled scheduling and result publication.
